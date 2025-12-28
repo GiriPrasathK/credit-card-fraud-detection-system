@@ -64,22 +64,17 @@ Class: 0 = Legitimate, 1 = Fraud
 
 Due to confidentiality constraints, all sensitive features are PCA-transformed, which is common in financial datasets.
 
-🏗️ Project Architecture
-credit-card-fraud-detection-system/
-├── notebooks/        # EDA & model experiments
-├── src/              # Production ML pipeline
-│   ├── preprocess.py
-│   ├── train.py
-│   ├── evaluate.py
-│   └── explain.py
-├── api/              # FastAPI backend
-│   └── main.py
-├── app/              # Streamlit dashboard
-│   └── streamlit_app.py
-├── models/           # Saved model & scaler (gitignored)
-├── data/             # Dataset (gitignored)
-├── README.md
-└── requirements.txt
+Folder Structure-
+## 🏗️ Project Structure
+
+- [`api/`](api/) – FastAPI backend
+- [`app/`](app/) – Streamlit dashboard
+- [`src/`](src/) – ML pipeline
+- [`notebooks/`](notebooks/) – EDA & experiments
+- [`models/`](models/) – Model artifacts (gitignored)
+- [`data/`](data/) – Dataset files (gitignored)
+
+
 
 📈 Model Performance
 
@@ -132,8 +127,7 @@ streamlit run app/streamlit_app.py
 🌐 Live Demo
 
 A public Streamlit application is deployed for real-time fraud prediction and explainability.
-(Deployment link can be added here once live)
-
+(Link added once active)
 📌 Key Learnings
 
 Handling extreme class imbalance is critical in fraud detection
