@@ -5,6 +5,9 @@ import numpy as np
 import os
 import shap
 import pandas as pd
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 st.set_page_config(
     page_title="Credit Card Fraud Detection",
@@ -19,8 +22,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL_PATH = os.path.join(BASE_DIR, "models", "fraud_xgb.pkl")
 SCALER_PATH = os.path.join(BASE_DIR, "models", "scaler.pkl")
 
-model = joblib.load(MODEL_PATH)
-scaler = joblib.load(SCALER_PATH)
+@st.cache_resource
+def load_model_and_scaler():
+    from src.train import train
+
+    # Train model (creates models/ files)
+    train()
+
+    model = joblib.load(MODEL_PATH)
+    scaler = joblib.load(SCALER_PATH)
+    return model, scaler
+
+model, scaler = load_model_and_scaler()
+
 
 @st.cache_resource
 def load_shap_explainer(model,background):
