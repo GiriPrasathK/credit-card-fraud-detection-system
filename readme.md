@@ -66,20 +66,29 @@ Due to confidentiality constraints, all sensitive features are PCA-transformed, 
 
 Folder Structure-
 credit-card-fraud-detection-system/
-├── notebooks/        # EDA & model experiments
-├── src/              # Production ML pipeline
-│   ├── preprocess.py
-│   ├── train.py
-│   ├── evaluate.py
-│   └── explain.py
-├── api/              # FastAPI backend
-│   └── main.py
-├── app/              # Streamlit dashboard
-│   └── streamlit_app.py
-├── models/           # Saved model & scaler (gitignored)
-├── data/             # Dataset (gitignored)
+├── api/
+│ └── main.py # FastAPI backend
+│
+├── app/
+│ └── streamlit_app.py # Streamlit dashboard
+│
+├── src/
+│ ├── preprocess.py # Data preprocessing & SMOTE
+│ ├── train.py # Model training
+│ ├── evaluate.py # Model evaluation
+│ └── explain.py # SHAP explainability
+│
+├── notebooks/
+│ ├── 01_eda.ipynb # Exploratory data analysis
+│ └── 02_model_experiments.ipynb
+│
+├── models/ # Saved models (gitignored)
+├── data/ # Dataset files (gitignored)
+│ └── raw/
+│
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── .gitignore
 
 
 📈 Model Performance
