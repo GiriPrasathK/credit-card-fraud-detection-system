@@ -65,30 +65,15 @@ Class: 0 = Legitimate, 1 = Fraud
 Due to confidentiality constraints, all sensitive features are PCA-transformed, which is common in financial datasets.
 
 Folder Structure-
-credit-card-fraud-detection-system/
-├── api/
-│ └── main.py # FastAPI backend
-│
-├── app/
-│ └── streamlit_app.py # Streamlit dashboard
-│
-├── src/
-│ ├── preprocess.py # Data preprocessing & SMOTE
-│ ├── train.py # Model training
-│ ├── evaluate.py # Model evaluation
-│ └── explain.py # SHAP explainability
-│
-├── notebooks/
-│ ├── 01_eda.ipynb # Exploratory data analysis
-│ └── 02_model_experiments.ipynb
-│
-├── models/ # Saved models (gitignored)
-├── data/ # Dataset files (gitignored)
-│ └── raw/
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
+## 🏗️ Project Structure
+
+- [`api/`](api/) – FastAPI backend
+- [`app/`](app/) – Streamlit dashboard
+- [`src/`](src/) – ML pipeline
+- [`notebooks/`](notebooks/) – EDA & experiments
+- [`models/`](models/) – Model artifacts (gitignored)
+- [`data/`](data/) – Dataset files (gitignored)
+
 
 
 📈 Model Performance
