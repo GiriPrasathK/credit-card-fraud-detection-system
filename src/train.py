@@ -1,8 +1,10 @@
 import joblib
 from src.preprocess import preprocess_data
 import xgboost as xgb
+import os 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(BASE_DIR, "data", "raw", "creditcard.csv")
 
-DATA_PATH='data/raw/Dataset-1.csv'
 MODEL_PATH='models/fraud_xgb.pkl'
 SCALER_PATH='models/scaler.pkl'
 
