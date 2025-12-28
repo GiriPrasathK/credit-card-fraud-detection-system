@@ -125,9 +125,8 @@ http://127.0.0.1:8000/docs
 streamlit run app/streamlit_app.py
 
 🌐 Live Demo
+https://credit-card-fraud-detection-system-5kg6qkqxy8zjmyv6umvlhx.streamlit.app
 
-A public Streamlit application is deployed for real-time fraud prediction and explainability.
-(Link added once active)
 📌 Key Learnings
 
 Handling extreme class imbalance is critical in fraud detection
