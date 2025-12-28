@@ -2,9 +2,18 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from imblearn.over_sampling import SMOTE
+import os
+import urllib.request
 
 def preprocess_data(file_path):
     # Load the dataset
+    if not os.path.exists(file_path):
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
+        url="https://storage.googleapis.com/download.tensorflow.org/data/creditcard.csv"
+        urllib.request.urlretrieve(url, file_path)
+
+
     df = pd.read_csv(file_path)
     
     # Separate features and target variable
