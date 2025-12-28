@@ -37,8 +37,8 @@ model, scaler = load_model_and_scaler()
 
 
 @st.cache_resource
-def load_shap_explainer(model,background):
-    return shap.Explainer(model, background)
+def load_shap_explainer(_model,background):
+    return shap.Explainer(_model, background)
 
 # ---- Input ----
 row_input = st.text_area(
